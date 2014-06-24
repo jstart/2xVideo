@@ -1,5 +1,5 @@
 //
-//  DetailViewController.swift
+//  VideoViewController.swift
 //  2x Video
 //
 //  Created by Christopher Truman on 6/7/14.
@@ -7,61 +7,119 @@
 //
 
 import UIKit
+import MediaPlayer
+import AVKit
+import AVFoundation
 
-class DetailViewController: UIViewController, UISplitViewControllerDelegate {
+class VideoViewController: MasterViewController {
 
 	@IBOutlet var detailDescriptionLabel: UILabel
-	var masterPopoverController: UIPopoverController? = nil
-
-
-	var detailItem: AnyObject? {
-		didSet {
-		    // Update the view.
-		    self.configureView()
-
-		    if self.masterPopoverController != nil {
-		        self.masterPopoverController!.dismissPopoverAnimated(true)
-		    }
+	var player: AVPlayerViewController?
+	var window: UIWindow?
+	
+	@lazy var playbackSpeedToolbar: UIToolbar = {
+		let toolbar = UIToolbar(frame: CGRectMake(0, 50, UIScreen.mainScreen().bounds.size.width, 40))
+        var isiPad = UIDevice.currentDevice().userInterfaceIdiom == UIUserInterfaceIdiom.Pad
+        var alpha:CGFloat
+        if isiPad{
+            alpha = 0.75
+        }else{
+            alpha = 0.25
+        }
+		toolbar.barTintColor = UIColor(white: alpha, alpha: alpha)
+		return toolbar
+	}()
+	
+	@lazy var playbackSpeedSlider: UISlider = {
+        var isiPad = UIDevice.currentDevice().userInterfaceIdiom == UIUserInterfaceIdiom.Pad
+        var width:CGFloat
+        var alpha:AnyObject
+        if isiPad{
+            width = 650.0
+        }else{
+            width = 200.0
+        }
+		let slider = UISlider(frame: CGRectMake(60, 8, width, 25))
+		slider.minimumValue = 0.1
+		slider.value = 1.0
+		slider.maximumValue = 4.0
+		slider.tintColor = UIColor.blackColor()
+		slider.addTarget(self, action: "speedButtonValueChanged:", forControlEvents: UIControlEvents.ValueChanged)
+		slider.backgroundColor = UIColor.clearColor()
+		return slider
+	}()
+	
+	@lazy var playbackSpeedLabel: UILabel = {
+		let label = UILabel(frame: CGRectMake(10, 8, 60, 25))
+		label.text = "1x"
+		label.backgroundColor = UIColor.clearColor()
+		return label
+	}()
+    
+    var detailItem: Movie?
+	
+	func getKeyWindow() -> UIWindow	{
+		return  UIApplication.sharedApplication().keyWindow
+	}
+	
+	func speedButtonValueChanged(sender: UISlider){
+		var text = "\(sender.value)" as NSString
+		if text.length >= 3{
+			text = text.stringByReplacingCharactersInRange(NSMakeRange(3, text.length-3), withString: "")
 		}
+		player!.player.rate = text.floatValue
+		
+		text = "\(text)x"
+		playbackSpeedLabel.text = text
 	}
-
-	func configureView() {
-		// Update the user interface for the detail item.
-		if let detail: AnyObject = self.detailItem {
-		    if let label = self.detailDescriptionLabel {
-		        label.text = detail.description
-		    }
-		}
-	}
-
-	override func viewDidLoad() {
-		super.viewDidLoad()
-		// Do any additional setup after loading the view, typically from a nib.
-		self.configureView()
-	}
-
-	override func didReceiveMemoryWarning() {
-		super.didReceiveMemoryWarning()
-		// Dispose of any resources that can be recreated.
-	}
-
-	// #pragma mark - Split view
-
-	func splitViewController(splitController: UISplitViewController, willHideViewController viewController: UIViewController, withBarButtonItem barButtonItem: UIBarButtonItem, forPopoverController popoverController: UIPopoverController) {
-	    barButtonItem.title = "Master" // NSLocalizedString(@"Master", @"Master")
-	    self.navigationItem.setLeftBarButtonItem(barButtonItem, animated: true)
-	    self.masterPopoverController = popoverController
-	}
-
-	func splitViewController(splitController: UISplitViewController, willShowViewController viewController: UIViewController, invalidatingBarButtonItem barButtonItem: UIBarButtonItem) {
-	    // Called when the view is shown again in the split view, invalidating the button and popover controller.
-	    self.navigationItem.setLeftBarButtonItem(nil, animated: true)
-	    self.masterPopoverController = nil
-	}
-	func splitViewController(splitController: UISplitViewController, collapseSecondaryViewController secondaryViewController: UIViewController, ontoPrimaryViewController primaryViewController: UIViewController) -> Bool {
-	    // Return true to indicate that we have handled the collapse by doing nothing; the secondary controller will be discarded.
-	    return true
-	}
-
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let object = objects[indexPath.row] as Movie
+        self.detailItem = object
+        if var detail = self.detailItem! as Movie? {
+            if var url = detail.URL as NSURL? {
+                player = AVPlayerViewController()
+                player!.player = AVPlayer(URL: url)
+                player!.player.play()
+                
+                self.presentViewController(player, animated: true, completion: {
+                    for subview in self.player!.view.subviews as UIView[] {
+                        for subsubview in subview.subviews as UIView[] {
+                            for subsubsubview in subsubview.subviews as UIView[] {
+                                for subsubsubsubview in subsubsubview.subviews as UIView[] {
+                                    if subsubsubsubview.frame.origin.y == UIScreen.mainScreen().bounds.size.height - 50{
+                                        UIView.animateWithDuration(0.3, animations: {
+                                            var frame:CGRect = subsubsubsubview.frame
+                                            frame.origin.y -= self.playbackSpeedToolbar.frame.size.height
+                                            frame.size.height += self.playbackSpeedToolbar.frame.size.height
+                                            subsubsubsubview.frame = frame
+                                        })
+                                    }
+                                    println(subsubsubsubview)
+                                    if subsubsubsubview.frame.size.height == 50 + self.playbackSpeedToolbar.frame.size.height && subsubsubsubview.frame.origin.y == UIScreen.mainScreen().bounds.size.height - 90{
+                                        for toolbarView in subsubsubsubview.subviews as UIView[] {
+                                            UIView.animateWithDuration(0.3, animations: {
+                                                var frame:CGRect = toolbarView.frame
+                                                frame.origin.y -= self.playbackSpeedToolbar.frame.size.height
+                                                frame.size.height += self.playbackSpeedToolbar.frame.size.height
+                                                toolbarView.frame = frame
+                                            })
+                                        }
+                                        self.playbackSpeedToolbar.alpha = 0.0
+                                        subsubsubsubview.addSubview(self.playbackSpeedToolbar)
+                                        UIView.animateWithDuration(0.3, animations: {
+                                            self.playbackSpeedToolbar.alpha = 1.0
+                                            self.playbackSpeedToolbar.addSubview(self.playbackSpeedSlider)
+                                            self.playbackSpeedToolbar.addSubview(self.playbackSpeedLabel)
+                                        })
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    })
+            }
+        }
+    }
 }
 

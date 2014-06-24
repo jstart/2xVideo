@@ -7,16 +7,48 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AD0982641949022A005E9D0F /* 202_hd_whats_new_in_cocoa_touch.mov in Resources */ = {isa = PBXBuildFile; fileRef = AD0982611949022A005E9D0F /* 202_hd_whats_new_in_cocoa_touch.mov */; };
+		AD0982651949022A005E9D0F /* 203_hd_introducing_healthkit.mov in Resources */ = {isa = PBXBuildFile; fileRef = AD0982621949022A005E9D0F /* 203_hd_introducing_healthkit.mov */; };
+		AD0982661949022A005E9D0F /* 204_hd_whats_new_in_cocoa.mov in Resources */ = {isa = PBXBuildFile; fileRef = AD0982631949022A005E9D0F /* 204_hd_whats_new_in_cocoa.mov */; };
 		AD4A2A3619441AE800A8C9AD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD4A2A3519441AE800A8C9AD /* AppDelegate.swift */; };
 		AD4A2A3819441AE800A8C9AD /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD4A2A3719441AE800A8C9AD /* MasterViewController.swift */; };
 		AD4A2A3A19441AE800A8C9AD /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD4A2A3919441AE800A8C9AD /* DetailViewController.swift */; };
-		AD4A2A3D19441AE800A8C9AD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD4A2A3B19441AE800A8C9AD /* Main.storyboard */; };
 		AD4A2A3F19441AE800A8C9AD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD4A2A3E19441AE800A8C9AD /* Images.xcassets */; };
 		AD4A2A4B19441AE800A8C9AD /* _x_VideoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD4A2A4A19441AE800A8C9AD /* _x_VideoTests.swift */; };
+		ADB3BB891949295800CAF0F4 /* MovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB3BB881949295800CAF0F4 /* MovieTableViewCell.swift */; };
+		ADB3BB8B1949303D00CAF0F4 /* MovieTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ADB3BB8A1949303D00CAF0F4 /* MovieTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		AD0982681949043D005E9D0F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AD4A2A2819441AE800A8C9AD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AD4A2A2F19441AE800A8C9AD;
+			remoteInfo = "2x Video";
+		};
+		AD09826A1949043D005E9D0F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AD4A2A2819441AE800A8C9AD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AD4A2A2F19441AE800A8C9AD;
+			remoteInfo = "2x Video";
+		};
 		AD4A2A4519441AE800A8C9AD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AD4A2A2819441AE800A8C9AD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AD4A2A2F19441AE800A8C9AD;
+			remoteInfo = "2x Video";
+		};
+		ADDF5BD4195A296700E5B17D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AD4A2A2819441AE800A8C9AD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AD4A2A2F19441AE800A8C9AD;
+			remoteInfo = "2x Video";
+		};
+		ADDF5BD6195A296700E5B17D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = AD4A2A2819441AE800A8C9AD /* Project object */;
 			proxyType = 1;
@@ -26,16 +58,22 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0F3A4F89E0564549AD49A0BB /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		AD0982611949022A005E9D0F /* 202_hd_whats_new_in_cocoa_touch.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; name = 202_hd_whats_new_in_cocoa_touch.mov; path = ../../../../../WWDC/202_hd_whats_new_in_cocoa_touch.mov; sourceTree = "<group>"; };
+		AD0982621949022A005E9D0F /* 203_hd_introducing_healthkit.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; name = 203_hd_introducing_healthkit.mov; path = ../../../../../WWDC/203_hd_introducing_healthkit.mov; sourceTree = "<group>"; };
+		AD0982631949022A005E9D0F /* 204_hd_whats_new_in_cocoa.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; name = 204_hd_whats_new_in_cocoa.mov; path = ../../../../../WWDC/204_hd_whats_new_in_cocoa.mov; sourceTree = "<group>"; };
 		AD4A2A3019441AE800A8C9AD /* 2x Video.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "2x Video.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD4A2A3419441AE800A8C9AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AD4A2A3519441AE800A8C9AD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AD4A2A3719441AE800A8C9AD /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
 		AD4A2A3919441AE800A8C9AD /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
-		AD4A2A3C19441AE800A8C9AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AD4A2A3E19441AE800A8C9AD /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		AD4A2A4419441AE800A8C9AD /* 2x VideoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "2x VideoTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD4A2A4919441AE800A8C9AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AD4A2A4A19441AE800A8C9AD /* _x_VideoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _x_VideoTests.swift; sourceTree = "<group>"; };
+		AD4A2A581944201C00A8C9AD /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; };
+		ADB3BB881949295800CAF0F4 /* MovieTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MovieTableViewCell.swift; path = "Table Cells/MovieTableViewCell.swift"; sourceTree = "<group>"; };
+		ADB3BB8A1949303D00CAF0F4 /* MovieTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MovieTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,12 +94,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		784A7B5D488E4D4EB2D1ED29 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0F3A4F89E0564549AD49A0BB /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AD09826719490230005E9D0F /* Videos */ = {
+			isa = PBXGroup;
+			children = (
+				AD0982611949022A005E9D0F /* 202_hd_whats_new_in_cocoa_touch.mov */,
+				AD0982621949022A005E9D0F /* 203_hd_introducing_healthkit.mov */,
+				AD0982631949022A005E9D0F /* 204_hd_whats_new_in_cocoa.mov */,
+			);
+			name = Videos;
+			sourceTree = "<group>";
+		};
 		AD4A2A2719441AE800A8C9AD = {
 			isa = PBXGroup;
 			children = (
 				AD4A2A3219441AE800A8C9AD /* 2x Video */,
 				AD4A2A4719441AE800A8C9AD /* 2x VideoTests */,
 				AD4A2A3119441AE800A8C9AD /* Products */,
+				784A7B5D488E4D4EB2D1ED29 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -77,10 +134,13 @@
 		AD4A2A3219441AE800A8C9AD /* 2x Video */ = {
 			isa = PBXGroup;
 			children = (
+				ADFAFBCF194ACA75008F3503 /* Subclasses */,
+				ADB3BB871949292D00CAF0F4 /* Table Cells */,
+				AD09826719490230005E9D0F /* Videos */,
 				AD4A2A3519441AE800A8C9AD /* AppDelegate.swift */,
 				AD4A2A3719441AE800A8C9AD /* MasterViewController.swift */,
+				AD4A2A581944201C00A8C9AD /* MyPlayground.playground */,
 				AD4A2A3919441AE800A8C9AD /* DetailViewController.swift */,
-				AD4A2A3B19441AE800A8C9AD /* Main.storyboard */,
 				AD4A2A3E19441AE800A8C9AD /* Images.xcassets */,
 				AD4A2A3319441AE800A8C9AD /* Supporting Files */,
 			);
@@ -110,6 +170,22 @@
 				AD4A2A4919441AE800A8C9AD /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		ADB3BB871949292D00CAF0F4 /* Table Cells */ = {
+			isa = PBXGroup;
+			children = (
+				ADB3BB881949295800CAF0F4 /* MovieTableViewCell.swift */,
+				ADB3BB8A1949303D00CAF0F4 /* MovieTableViewCell.xib */,
+			);
+			name = "Table Cells";
+			sourceTree = "<group>";
+		};
+		ADFAFBCF194ACA75008F3503 /* Subclasses */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Subclasses;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -144,6 +220,10 @@
 			);
 			dependencies = (
 				AD4A2A4619441AE800A8C9AD /* PBXTargetDependency */,
+				AD0982691949043D005E9D0F /* PBXTargetDependency */,
+				AD09826B1949043D005E9D0F /* PBXTargetDependency */,
+				ADDF5BD5195A296700E5B17D /* PBXTargetDependency */,
+				ADDF5BD7195A296700E5B17D /* PBXTargetDependency */,
 			);
 			name = "2x VideoTests";
 			productName = "2x VideoTests";
@@ -161,6 +241,7 @@
 				TargetAttributes = {
 					AD4A2A2F19441AE800A8C9AD = {
 						CreatedOnToolsVersion = 6.0;
+						DevelopmentTeam = PP6S682Z9F;
 					};
 					AD4A2A4319441AE800A8C9AD = {
 						CreatedOnToolsVersion = 6.0;
@@ -192,7 +273,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AD4A2A3D19441AE800A8C9AD /* Main.storyboard in Resources */,
+				ADB3BB8B1949303D00CAF0F4 /* MovieTableViewCell.xib in Resources */,
+				AD0982661949022A005E9D0F /* 204_hd_whats_new_in_cocoa.mov in Resources */,
+				AD0982641949022A005E9D0F /* 202_hd_whats_new_in_cocoa_touch.mov in Resources */,
+				AD0982651949022A005E9D0F /* 203_hd_introducing_healthkit.mov in Resources */,
 				AD4A2A3F19441AE800A8C9AD /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -213,6 +297,7 @@
 			files = (
 				AD4A2A3A19441AE800A8C9AD /* DetailViewController.swift in Sources */,
 				AD4A2A3819441AE800A8C9AD /* MasterViewController.swift in Sources */,
+				ADB3BB891949295800CAF0F4 /* MovieTableViewCell.swift in Sources */,
 				AD4A2A3619441AE800A8C9AD /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -228,23 +313,32 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		AD0982691949043D005E9D0F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AD4A2A2F19441AE800A8C9AD /* 2x Video */;
+			targetProxy = AD0982681949043D005E9D0F /* PBXContainerItemProxy */;
+		};
+		AD09826B1949043D005E9D0F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AD4A2A2F19441AE800A8C9AD /* 2x Video */;
+			targetProxy = AD09826A1949043D005E9D0F /* PBXContainerItemProxy */;
+		};
 		AD4A2A4619441AE800A8C9AD /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = AD4A2A2F19441AE800A8C9AD /* 2x Video */;
 			targetProxy = AD4A2A4519441AE800A8C9AD /* PBXContainerItemProxy */;
 		};
-/* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		AD4A2A3B19441AE800A8C9AD /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				AD4A2A3C19441AE800A8C9AD /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
+		ADDF5BD5195A296700E5B17D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AD4A2A2F19441AE800A8C9AD /* 2x Video */;
+			targetProxy = ADDF5BD4195A296700E5B17D /* PBXContainerItemProxy */;
 		};
-/* End PBXVariantGroup section */
+		ADDF5BD7195A296700E5B17D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AD4A2A2F19441AE800A8C9AD /* 2x Video */;
+			targetProxy = ADDF5BD6195A296700E5B17D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		AD4A2A4C19441AE800A8C9AD /* Debug */ = {
@@ -283,7 +377,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				METAL_ENABLE_DEBUG_INFO = YES;
-				ONLY_ACTIVE_ARCH = YES;
+				ONLY_ACTIVE_ARCH = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -320,6 +414,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				METAL_ENABLE_DEBUG_INFO = NO;
+				ONLY_ACTIVE_ARCH = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -331,9 +426,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "2x Video/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -342,9 +441,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "2x Video/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -352,6 +455,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/2x Video.app/2x Video";
+				CODE_SIGN_IDENTITY = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -364,6 +468,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				METAL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 			};
 			name = Debug;
@@ -372,6 +477,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/2x Video.app/2x Video";
+				CODE_SIGN_IDENTITY = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -380,6 +486,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				METAL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 			};
 			name = Release;
@@ -403,6 +510,7 @@
 				AD4A2A5019441AE800A8C9AD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AD4A2A5119441AE800A8C9AD /* Build configuration list for PBXNativeTarget "2x VideoTests" */ = {
 			isa = XCConfigurationList;
@@ -411,6 +519,7 @@
 				AD4A2A5319441AE800A8C9AD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

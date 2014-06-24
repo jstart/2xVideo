@@ -5,7 +5,6 @@
 //  Created by Christopher Truman on 6/7/14.
 //  Copyright (c) 2014 Truman. All rights reserved.
 //
-
 import UIKit
 
 @UIApplicationMain
@@ -13,12 +12,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                             
 	var window: UIWindow?
 
-
 	func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: NSDictionary?) -> Bool {
-		// Override point for customization after application launch.
-		let splitViewController = self.window!.rootViewController as UISplitViewController
-		let navigationController = splitViewController.viewControllers[splitViewController.viewControllers.endIndex-1] as UINavigationController
-		splitViewController.delegate = navigationController.topViewController as DetailViewController
+        self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
+        var navigationController = UINavigationController(rootViewController: VideoViewController(style: UITableViewStyle.Plain))
+        self.window!.rootViewController = navigationController;
+        self.window!.makeKeyAndVisible()
 		return true
 	}
 
